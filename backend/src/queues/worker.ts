@@ -99,6 +99,6 @@ export const setupWorker = (io: Server) => {
         });
       }
     },
-    { connection: redisConnection },
+    { connection: redisConnection as any },
   );
 };

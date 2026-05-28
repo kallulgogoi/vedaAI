@@ -14,7 +14,7 @@ const redisConnection = new Redis(redisUrl, {
 });
 
 export const assessmentQueue = new Queue("assessment-generation", {
-  connection: redisConnection,
+  connection: redisConnection as any,
 });
 
 export const addGenerationJob = async (assessmentId: string, payload: any) => {
