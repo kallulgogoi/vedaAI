@@ -76,7 +76,7 @@ export default function Sidebar() {
                   <span className="text-sm">{item.name}</span>
                 </div>
 
-                {item.badge > 0 && (
+                {typeof item.badge === "number" && item.badge > 0 && (
                   <span className="bg-orange-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
                     {item.badge}
                   </span>
