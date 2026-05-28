@@ -29,11 +29,11 @@ app.use(express.json());
 
 app.use("/api", apiRoutes);
 
-io.on("connection", (socket) => {
+io.on("connection", (socket: any) => {
   console.log(`Frontend connected: ${socket.id}`);
 
   // Frontend tells us which assessment ID it is waiting for
-  socket.on("join-room", (assessmentId) => {
+  socket.on("join-room", (assessmentId: string) => {
     socket.join(assessmentId);
     console.log(`Joined room: ${assessmentId}`);
   });

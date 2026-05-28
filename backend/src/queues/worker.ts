@@ -23,7 +23,7 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
 export const setupWorker = (io: Server) => {
   new Worker(
     "assessment-generation",
-    async (job) => {
+    async (job: any) => {
       const { assessmentId, payload } = job.data;
 
       try {
