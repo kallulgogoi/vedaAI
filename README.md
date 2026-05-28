@@ -58,7 +58,7 @@ sequenceDiagram
     participant DB as MongoDB
     participant R as Upstash Redis
     participant W as BullMQ Worker
-    participant G as Gemini 1.5 Flash
+    participant G as Gemini 2.5 Flash
     
     C->>A: 1. POST /assessments (Prompt + File)
     A->>DB: 2. Create Assessment (Status: PENDING)
